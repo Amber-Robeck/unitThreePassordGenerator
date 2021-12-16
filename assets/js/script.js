@@ -1,18 +1,19 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+generateBtn.addEventListener("click", writePassword);
+
 // Write password to the #password input
 function writePassword() {
   // console.log("testing"); to make sure button is working
-
   var password = generatePassword();
+  console.log(generatePassword)
   var passwordText = document.querySelector("#password");
   
   passwordText.value = password;
-  
 }
-
-function generatePassword() {
+  
+  function generatePassword() {
   
   //add "prompt function" for userInput for num of char in password
   var numOfChar = prompt("enter the length of password");
@@ -98,6 +99,9 @@ var pleaseWork = [];
     console.log(pleaseWork)
   }
   
+  // password=pleaseWork.join("");
+  return password=pleaseWork.toString("");
+  
   
   
   
@@ -107,6 +111,7 @@ var pleaseWork = [];
   //push that item in new password array
   // return new password
 }
+ 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
