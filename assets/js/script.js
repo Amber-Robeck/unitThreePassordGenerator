@@ -40,14 +40,32 @@ function generatePassword() {
 
    }
   
-  var uppercase = confirm("Would you like to include lowercase letters?");
+  var uppercase = confirm("Would you like to include uppercase letters?");
   console.log(uppercase);
+  if (uppercase) {
+    userChoice=uppercaseLetters.concat(userChoice);
+    
+    console.log(userChoice);
 
-  var numbers= confirm("Would you like to include lowercase letters?");
-  console.log(numbers);
+  }
 
-  var special = confirm("Would you like to include lowercase letters?");
+  var numbersChoice= confirm("Would you like to include numbers?");
+  console.log(numbersChoice);
+  if (numbersChoice) {
+    userChoice=numbers.concat(userChoice);
+    
+    console.log(userChoice);
+
+  }
+
+  var special = confirm("Would you like to include special characters?");
   console.log(special);
+  if (special) {
+    userChoice=specialCharacters.concat(userChoice);
+    
+    console.log(userChoice);
+
+  }
 
 
 
@@ -56,7 +74,7 @@ function generatePassword() {
   var userInput = {
     userLowercase: lowercase,
     userUppercase: uppercase,
-    userNumbers: numbers,
+    userNumbers: numbersChoice,
     userSpecial: special,
   
   }
