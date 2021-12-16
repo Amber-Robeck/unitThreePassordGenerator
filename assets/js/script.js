@@ -25,15 +25,20 @@ function generatePassword() {
   
   var lowercaseLetters= ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]; 
   var uppercaseLetters= ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-  
-  // var specialCharacters= []; 
-  // var numbers=[];
+  var specialCharacters= ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"]; 
+  var numbers= [1,2,3,4,5,6,7,8,9,0];
   console.log(uppercaseLetters);
   
   //userInput confirmation for numeric, lowercase, uppercase, special (separately)
-  
+  var userChoice= [];
   var lowercase = confirm("Would you like to include lowercase letters?");
   console.log(lowercase);
+   if (lowercase) {
+     userChoice=lowercaseLetters.concat(userChoice);
+     
+     console.log(userChoice);
+
+   }
   
   var uppercase = confirm("Would you like to include lowercase letters?");
   console.log(uppercase);
@@ -43,6 +48,8 @@ function generatePassword() {
 
   var special = confirm("Would you like to include lowercase letters?");
   console.log(special);
+
+
 
   //save those confirmations in separate variables
   // store all the values in form of arrays
@@ -64,6 +71,8 @@ function generatePassword() {
 // console.log(typeof numOfChar)
 // console.log(numOfChar.length)
   
+
+//if I call this password will it enter the password into box
 
 var pleaseWork = []; 
   for (var i = 0; i < parseInt(numOfChar); i++) {
