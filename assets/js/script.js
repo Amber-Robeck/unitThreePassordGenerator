@@ -97,10 +97,11 @@ var pleaseWork = [];
   for (var i = 0; i < parseInt(numOfChar); i++) {
     pleaseWork.push(uppercaseLetters[Math.floor(Math.random() * uppercaseLetters.length)]) 
     console.log(pleaseWork)
+    console.log(typeof pleaseWork)
   }
   
   // password=pleaseWork.join("");
-  return password=pleaseWork.toString("");
+  return password=pleaseWork.join("");
   
   
   
