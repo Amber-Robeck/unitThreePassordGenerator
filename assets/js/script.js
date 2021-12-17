@@ -49,6 +49,10 @@ function writePassword() {
   if (special) {
     userChoice=specialCharacters.concat(userChoice);
     }
+  if (!lowercase && !uppercase && !numbersChoice && !special){
+    alert("You need to pick at least one set of characters!")
+    return;
+  }
   
 //Takes concat array and randomly generates password from user choice of characters
 var passwordGenerator = []; 
@@ -59,5 +63,3 @@ var passwordGenerator = [];
   }
   return password=passwordGenerator.join("");
 }
- //Button for user click
-// generateBtn.addEventListener("click", writePassword);
