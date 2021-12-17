@@ -11,7 +11,7 @@ function writePassword() {
   function generatePassword() {
   
   //Asks userInput for num of char in password
-  var numOfChar = prompt("enter the length of password");
+  var numOfChar = prompt("How many characters would you like your password to be? (8-128)");
   if (!(numOfChar >= 8 && numOfChar <= 128)) {
     alert("You must choose between 8 and 128 characters!")
     return;
@@ -27,25 +27,25 @@ function writePassword() {
   //userInput confirmation for numeric, lowercase, uppercase, special (separately)
   //If user chooses special characters then concat to array userChoice
   var userChoice= [];
-  var lowercase = confirm("Would you like to include lowercase letters?");
+  var lowercase = confirm("Would you like to include lowercase letters? (a, b, c...)");
    if (lowercase) {
      userChoice=lowercaseLetters.concat(userChoice);
     }
 
   //If user chooses uppercase letters then concat to array userChoice
-  var uppercase = confirm("Would you like to include uppercase letters?");
+  var uppercase = confirm("Would you like to include uppercase letters? (A, B, C...)");
   if (uppercase) {
     userChoice=uppercaseLetters.concat(userChoice);
     }
 
   //If user chooses number then concat to array userChoice
-  var numbersChoice= confirm("Would you like to include numbers?");
+  var numbersChoice= confirm("Would you like to include numbers? (1, 2, 3...)");
   if (numbersChoice) {
     userChoice=numbers.concat(userChoice);
   }
 
   //If user chooses special characters then concat to array userChoice
-  var special = confirm("Would you like to include special characters?");
+  var special = confirm("Would you like to include special characters? (!, @, #...)");
   if (special) {
     userChoice=specialCharacters.concat(userChoice);
     }
