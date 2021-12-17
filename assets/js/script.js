@@ -58,8 +58,6 @@ function writePassword() {
 var passwordGenerator = []; 
   for (var i = 0; i < parseInt(numOfChar); i++) {
     passwordGenerator.push(userChoice[Math.floor(Math.random() * userChoice.length)]) 
-    console.log(passwordGenerator)
-    console.log(typeof passwordGenerator)
   }
   return password=passwordGenerator.join("");
 }
